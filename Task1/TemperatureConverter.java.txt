@@ -1,0 +1,59 @@
+package com.Level1Tasks;
+
+import java.util.Scanner;
+
+public class TemperatureConverter {
+	
+	int request;
+	
+	public void EndUser()
+	{
+		System.out.println("Level=1 Task-1");
+		System.out.println("Temperaturer Converter");
+                System.out.println("=======================");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value in Integer format");
+		request=sc.nextInt();
+	}
+	public void Converter()
+	{
+		switch (request) {
+		case 1:
+		{
+			System.out.println("Converting the temperature from Fahrenheit to Celsius");
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter the value");
+			Double value=sc.nextDouble();
+			Double valuefinal=(value-32)*5/9;
+			System.out.println("The Converted value is:"+valuefinal);
+			break;
+		}
+		case 2:
+		{
+			System.out.println("Converting the temperature from Celsius to Fahrenheit");
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter the value");
+			Double value=sc.nextDouble();
+			Double valuefinal=(value*9/5)+32;
+			System.out.println("The Converted value is:"+valuefinal);
+			break;
+		}
+			
+			
+
+		default:
+			System.out.println("Invalid request:"+request);
+			break;
+		}
+	}
+	
+	public static void main(String[]args)
+	{
+		TemperatureConverter tc=new TemperatureConverter();
+		tc.EndUser();
+		tc.Converter();
+				
+	}
+	
+
+}
